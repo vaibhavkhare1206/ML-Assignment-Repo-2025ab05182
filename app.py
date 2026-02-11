@@ -238,7 +238,7 @@ if st.session_state['X_train'] is not None and st.session_state['y_train'] is no
                 model = RandomForestClassifier(n_estimators=10, random_state=42)
                 model.fit(X_train, y_train)
             elif st.session_state['selected_model'] == 'XGBoost Model':
-                model = xgb.XGBClassifier(random_state=42, use_label_encoder=False, eval_metric='logloss', objective='binary:logistic')
+                model = xgb.XGBClassifier(n_estimators=5, random_state=42, use_label_encoder=False, eval_metric='logloss', objective='binary:logistic')
 
             if model:
                 model.fit(X_train, y_train)

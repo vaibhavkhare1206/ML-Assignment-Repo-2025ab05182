@@ -157,6 +157,7 @@ The deployed web application includes:
 ✅ **Test Data Download**: Download test.csv directly from GitHub  
 ✅ **CSV File Upload**: Upload test data in CSV format  
 ✅ **Data Preview**: View uploaded data with predictions and probabilities 
+
 ✅ **Model Selection**: Choose from 6 different ML models via dropdown  
 ✅ **Evaluation Metrics**: Display of Accuracy, AUC, Precision, Recall, F1, and MCC  
 ✅ **Classification Report**: Detailed per-class performance metrics  
@@ -210,4 +211,5 @@ portuguese-bank-data-classification
 ├── app.py                          # Streamlit web application
 ├── requirements.txt                # Python dependencies
 ```
+
 

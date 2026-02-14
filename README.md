@@ -32,9 +32,7 @@ Requirements for project:
 
 
 
-
-
-## Dataset Description
+## 📊 Dataset Description
 
 
 
@@ -147,6 +145,7 @@ The dataset comprises both numerical and categorical features:
 |Naive Bayes - Gaussian Classifier|Naive Bayes was the weakest performer among all (Accuracy: 0.8478, F1: 0.8557), suggesting that the assumption of conditional independence between features given the class might not hold strongly for this dataset.|
 |Ensemble Model - Random Forest|Random Forest model emerged as the best performer, achieving the highest accuracy (0.9573), AUC (0.9793), Precision (0.9578), Recall (0.9573), F1-score (0.9536), and MCC (0.7741). This highlights the benefit of combining multiple models or using boosting techniques for better generalization and accuracy.|
 |Ensemble Model - XGBoost|XGBoost achieved the second-best performance accuracy (0.9541), AUC(0.9787), Precision (0.953), Recall (0.9549), F1-score (0.9533), and MCC (0.7665). It effectively captures complex patterns and feature interactions. While slightly lower than Random Forest in this case, it shows strong performance with good generalization. The model benefits from gradient boosting's ability to correct errors iteratively.|
+
 
 
 

@@ -68,6 +68,12 @@ if 'selected_model' not in st.session_state:
 if 'original_df' not in st.session_state: # Initialize original_df
     st.session_state['original_df'] = None
 
+# Callback function to reset model and predictions when model selection changes
+def reset_model_and_results():
+    st.session_state['model'] = None
+    st.session_state['y_pred'] = None
+    st.info("Model and prediction results cleared due to model selection change.")
+
 # --- Data Upload ---
 st.header('📤 Data Upload - Upload Your Test Data')
 uploaded_file = st.file_uploader("👆 Upload your CSV file", type=["csv"])
@@ -223,7 +229,9 @@ model_options = [
 st.session_state['selected_model'] = st.sidebar.selectbox(
     'Choose a Classification Model',
     model_options,
-    index=model_options.index(st.session_state['selected_model'])
+    index=model_options.index(st.session_state['selected_model']),
+    key='model_selector', # Added a unique key
+    on_change=reset_model_and_results # Added the callback function
 )
 st.sidebar.write(f"You selected the **{st.session_state['selected_model']}** model.")
 
@@ -253,7 +261,7 @@ if st.session_state['X_train'] is not None and st.session_state['y_train'] is no
                 model = xgb.XGBClassifier(n_estimators=5, random_state=42, use_label_encoder=False, eval_metric='logloss', objective='binary:logistic')
 
             if model:
-                model.fit(X_train, y_train)
+                model.fit(X_train, y_train);
                 st.success(f"{st.session_state['selected_model']} trained successfully!") 
                 st.session_state['model'] = model
                 st.session_state['y_pred'] = model.predict(X_test)

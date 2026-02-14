@@ -154,14 +154,15 @@ The dataset comprises both numerical and categorical features:
 
 The deployed web application includes:
 
+✅ **Test Data Download**: Download test.csv directly from GitHub  
 ✅ **CSV File Upload**: Upload test data in CSV format  
+✅ **Data Preview**: View uploaded data with predictions and probabilities 
 ✅ **Model Selection**: Choose from 6 different ML models via dropdown  
 ✅ **Evaluation Metrics**: Display of Accuracy, AUC, Precision, Recall, F1, and MCC  
-✅ **Confusion Matrix**: Heatmap visualization of prediction results  
 ✅ **Classification Report**: Detailed per-class performance metrics  
-✅ **Prediction Export**: Download predictions as CSV  
-✅ **Data Preview**: View uploaded data with predictions and probabilities  
-✅ **Test Data Download**: Download test.csv directly from GitHub  
+✅ **Confusion Matrix**: Heatmap visualization of prediction results  
+ 
+
 
 
 ---
